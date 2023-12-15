@@ -3,7 +3,23 @@
 #include<string>
 using namespace std;
 
-//[Missing Code 1] Write definition of the function findGrade() here.
+//ขอให้เติมเฉพาะ Function findGrade() เท่านั้น โดยที่ไม่ต้องเติม Function main()
+
+char findGrade(double x) {
+    if(x>90.0){
+        return 'A';
+    }else if(x>75.0 && x<=90.0){
+        return 'B';
+    }else if(x>60.0 && x<=75.0){
+        return 'C';
+    }else if(x>45.0 && x<=60.0){
+        return 'D';
+    }else if(x<=45.0){
+        return 'F';
+    }
+    
+    return x;
+}
 
 int main(){
 	//Input the number of students
@@ -17,9 +33,10 @@ int main(){
 	while(i < N){
 		cout << "Name of student " << i+1 << ": ";
 		cin.ignore();
-		//[Missing Code 2] Get name of the i-th students that may include whitespace.
+		getline(cin,name[i]);
 		cout << "Score of student " << i+1 << ": ";
-		//[Missing Code 3] Get score of the i-th students.
+		
+		cin >> score[i];
 		i++;
 	}
 	
